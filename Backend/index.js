@@ -33,9 +33,10 @@ pool.getConnection((err, connection) => {
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("Welcome to your Node.js backend!");
+  res.send("Backend Started");
 });
 
+// TODO For Adding New Dealer
 app.post("/add-dealer", (req, res) => {
   const dealerData = req.body;
   const sql = `
@@ -123,7 +124,6 @@ app.post("/add-dealer", (req, res) => {
   });
 });
 
-
 app.get("/dealer-info/:dealer_code", (req, res) => {
   const dealerCode = req.params.dealer_code;
   console.log(req);
@@ -140,6 +140,94 @@ app.get("/dealer-info/:dealer_code", (req, res) => {
       } else {
         res.status(200).json(result[0]);
       }
+    }
+  });
+});
+
+// TODO - To Update the dealer details
+app.put("/update-dealer/:dealer_code", (req, res) => {
+  const dealerCode = req.params.dealer_code;
+  const dealerData = req.body;
+  console.log(dealerData.amenities);
+  const sql = `
+    UPDATE dealer_info
+    SET
+      dealership_name = ?,
+      dealership_dba = ?,
+      dealership_street = ?,
+      dealership_city = ?,
+      dealership_state = ?,
+      dealership_zip = ?,
+      dealership_webiste = ?,
+      dealership_phnumber = ?,
+      dealer_principal_first_name = ?,
+      dealer_principal_last_name = ?,
+      dealer_principal_email = ?,
+      general_sales_mgr_first_name = ?,
+      general_sales_mgr_last_name = ?,
+      general_sales_mgr_email = ?,
+      general_service_mgr_first_name = ?,
+      general_service_mgr_last_name = ?,
+      general_service_mgr_email = ?,
+      controller_first_name = ?,
+      controller_last_name = ?,
+      controller_email = ?,
+      billing_contact_first_name = ?,
+      billing_contact_last_name = ?,
+      billing_contact_email = ?,
+      marketing_contact_first_name = ?,
+      marketing_contact_last_name = ?,
+      marketing_contact_email = ?,
+      marketing_contact_dms_provider = ?,
+      marketing_contact_service_scheduler_provider = ?,
+      dealership_bdc = ?,
+      amenities = ?
+    WHERE dealer_code = ?
+  `;
+
+  // Data to be updated
+  const values = [
+    dealerData.dealership_name,
+    dealerData.dealership_dba,
+    dealerData.dealership_street,
+    dealerData.dealership_city,
+    dealerData.dealership_state,
+    dealerData.dealership_zip,
+    dealerData.dealership_webiste,
+    dealerData.dealership_phnumber,
+    dealerData.dealer_principal_first_name,
+    dealerData.dealer_principal_last_name,
+    dealerData.dealer_principal_email,
+    dealerData.general_sales_mgr_first_name,
+    dealerData.general_sales_mgr_last_name,
+    dealerData.general_sales_mgr_email,
+    dealerData.general_service_mgr_first_name,
+    dealerData.general_service_mgr_last_name,
+    dealerData.general_service_mgr_email,
+    dealerData.controller_first_name,
+    dealerData.controller_last_name,
+    dealerData.controller_email,
+    dealerData.billing_contact_first_name,
+    dealerData.billing_contact_last_name,
+    dealerData.billing_contact_email,
+    dealerData.marketing_contact_first_name,
+    dealerData.marketing_contact_last_name,
+    dealerData.marketing_contact_email,
+    dealerData.marketing_contact_dms_provider,
+    dealerData.marketing_contact_service_scheduler_provider,
+    dealerData.dealership_bdc,
+    dealerData.amenities,
+    dealerCode,
+  ];
+
+  // Execute the query
+  pool.query(sql, values, (err, result) => {
+    if (err) {
+      console.error("Error updating data:", err);
+      res.status(500).send("Error updating data");
+    } else {
+      console.log("Data updated successfully");
+      res.status(200).send("Data updated successfully");
     }
   });
 });
