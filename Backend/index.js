@@ -3,7 +3,8 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
-const mysql = require("mysql");
+const mysql = require("mysql2");
+const convertBooleanToBuffer = require("./BufferConvert");
 require("dotenv").config();
 
 // Create Express app
@@ -148,7 +149,7 @@ app.get("/dealer-info/:dealer_code", (req, res) => {
 app.put("/update-dealer/:dealer_code", (req, res) => {
   const dealerCode = req.params.dealer_code;
   const dealerData = req.body;
-  console.log(dealerData.amenities);
+  const dealershipBdcBuffer = convertBooleanToBuffer(dealerData.dealership_bdc);
   const sql = `
     UPDATE dealer_info
     SET
@@ -215,7 +216,7 @@ app.put("/update-dealer/:dealer_code", (req, res) => {
     dealerData.marketing_contact_email,
     dealerData.marketing_contact_dms_provider,
     dealerData.marketing_contact_service_scheduler_provider,
-    dealerData.dealership_bdc,
+    dealershipBdcBuffer,
     dealerData.amenities,
     dealerCode,
   ];
