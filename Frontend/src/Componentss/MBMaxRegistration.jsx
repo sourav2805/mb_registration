@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
+
 import Box from "@mui/material/Box";
 import {
   Button,
@@ -9,6 +10,7 @@ import {
   FormControlLabel,
   FormLabel,
   Grid,
+  Input,
   InputLabel,
   MenuItem,
   Radio,
@@ -123,6 +125,7 @@ const MBMaxRegistration = () => {
           margin: "auto",
           justifyContent: "center",
           alignItems: "center",
+          width:655
         }}
       >
         <Box
@@ -130,7 +133,7 @@ const MBMaxRegistration = () => {
             color: "#000",
             textAlign: "center",
             fontFamily: "MB Corpo A Title Cond Office",
-            fontSize: "55px",
+            fontSize: "45px",
             fontStyle: "normal",
             fontWeight: "400",
             lineHeight: "normal",
@@ -158,13 +161,14 @@ const MBMaxRegistration = () => {
         </Box>
       </div>
       {/* SECTION FORM */}
-      <Box
+
+<div style={{width:600, margin:"0 auto"}}><Box
         component="form"
         noValidate
         autoComplete="off"
         onSubmit={handleSubmit} // Handle form submission
         sx={{
-          border: "2px solid red",
+          // border: "2px solid red",
           margin: "auto",
           justifyContent: "center",
         }}
@@ -175,11 +179,11 @@ const MBMaxRegistration = () => {
             width: "100%",
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            columnGap: "10px",
+            columnGap: "2rem",
             margin: "auto",
             justifyContent: "space-around",
             alignItems: "center",
-            border: "2px solid red",
+            // border: "2px solid red",
             textAlign: "left",
           }}
         >
@@ -219,7 +223,7 @@ const MBMaxRegistration = () => {
           />
           <TextField
             id="dealer-dba"
-            label="Dealership DBA *"
+            label="Dealership DBA"
             variant="standard"
             value={formData.dealership_dba}
             onChange={(e) =>
@@ -228,6 +232,7 @@ const MBMaxRegistration = () => {
                 dealership_dba: e.target.value,
               }))
             }
+            sx={{marginTop:2}}
           />
         </Box>
         <Box
@@ -239,8 +244,10 @@ const MBMaxRegistration = () => {
             rowGap: "10px",
             margin: "auto",
             justifyContent: "left",
-            alignItems: "center",
-            border: "2px solid green",
+            marginTop:4,
+            // alignItems: "center",
+           
+            // border: "2px solid green",
             textAlign: "left",
           }}
         >
@@ -250,13 +257,13 @@ const MBMaxRegistration = () => {
               color: "#000",
               fontFamily: '"MB Corpo A Text Cond"',
               fontSize: "32px",
-              border: "2px solid red",
+              // border: "2px solid red",
               fontStyle: "normal",
               fontWeight: "400",
               display: "flex",
-              margin: "auto",
+              // margin: "auto",
               alignItems: "start",
-              textAlign: "start",
+              textAlign: "left",
             }}
           >
             Dealership Address
@@ -345,7 +352,7 @@ const MBMaxRegistration = () => {
               id="dealership_website_address"
               label="Dealership Website Address"
               variant="standard"
-              sx={{ width: "280px" }}
+              sx={{ width: "280px", marginTop:2 }}
               value={formData.dealership_webiste}
               onChange={(e) =>
                 setFormData((prevFormData) => ({
@@ -358,7 +365,7 @@ const MBMaxRegistration = () => {
               id="dealership_phone_number"
               label="Dealership Phone Number"
               variant="standard"
-              sx={{ width: "280px" }}
+              sx={{ width: "280px",marginTop:2 }}
               value={formData.dealership_phnumber}
               onChange={(e) =>
                 setFormData((prevFormData) => ({
@@ -380,8 +387,9 @@ const MBMaxRegistration = () => {
             rowGap: "10px",
             margin: "auto",
             justifyContent: "left",
-            alignItems: "center",
-            border: "2px solid green",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
             textAlign: "left",
           }}
         >
@@ -391,13 +399,13 @@ const MBMaxRegistration = () => {
               color: "#000",
               fontFamily: '"MB Corpo A Text Cond"',
               fontSize: "32px",
-              border: "2px solid red",
+              // border: "2px solid red",
               fontStyle: "normal",
               fontWeight: "400",
               display: "flex",
-              margin: "auto",
-              alignItems: "start",
-              textAlign: "start",
+              // margin: "auto",
+              // alignItems: "start",
+              textAlign: "left",
             }}
           >
             Dealer Principal
@@ -439,7 +447,7 @@ const MBMaxRegistration = () => {
               id="dealer_principal_email"
               label="Email"
               variant="standard"
-              sx={{ width: "280px" }}
+              sx={{ width: "280px",marginTop:2 }}
               value={formData.dealer_principal_email}
               onChange={(e) =>
                 setFormData((prevFormData) => ({
@@ -451,8 +459,44 @@ const MBMaxRegistration = () => {
           </Box>
         </Box>
         {/* General Sales Manager */}
-        <p id="general_sales_manager">General Sales Manager</p>
-        <TextField
+        <Box
+          as="div"
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "10px",
+            margin: "auto",
+            justifyContent: "left",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
+            textAlign: "left",
+          }}
+        >
+        <p id="general_sales_manager" style={{
+              color: "#000",
+              fontFamily: '"MB Corpo A Text Cond"',
+              fontSize: "32px",
+              // border: "2px solid red",
+              fontStyle: "normal",
+              fontWeight: "400",
+              display: "flex"
+              ,
+              // margin: "auto",
+              // alignItems: "start",
+              textAlign: "left",
+            }}>General Sales Manager</p>
+
+
+<Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              columnGap: "10%",
+            }}
+          >
+            <TextField
           id="general_sales_manager_first_name"
           label="First Name"
           variant="standard"
@@ -480,6 +524,7 @@ const MBMaxRegistration = () => {
           id="general_sales_manager_email"
           label="Email"
           variant="standard"
+          sx={{marginTop:2}}
           value={formData.general_service_mgr_email}
           onChange={(e) =>
             setFormData((prevFormData) => ({
@@ -489,9 +534,48 @@ const MBMaxRegistration = () => {
           }
         />
 
+          </Box>
+        
+</Box>
         {/* General Service Manager */}
-        <p id="general_service_manager">General Service Manager</p>
-        <TextField
+        <Box
+          as="div"
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "10px",
+            margin: "auto",
+            justifyContent: "left",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
+            textAlign: "left",
+          }}
+        >
+<p id="general_service_manager"
+style={{
+  color: "#000",
+  fontFamily: '"MB Corpo A Text Cond"',
+  fontSize: "32px",
+  // border: "2px solid red",
+  fontStyle: "normal",
+  fontWeight: "400",
+  display: "flex"
+  ,
+  // margin: "auto",
+  // alignItems: "start",
+  textAlign: "left",
+}}
+>General Service Manager</p>
+
+<Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              columnGap: "10%",
+            }}
+          ><TextField
           id="general_service_manager_first_name"
           label="First Name"
           variant="standard"
@@ -518,6 +602,7 @@ const MBMaxRegistration = () => {
         <TextField
           id="general_service_manager_email"
           label="Email"
+          sx={{marginTop:2}}
           variant="standard"
           value={formData.general_service_mgr_email}
           onChange={(e) =>
@@ -526,11 +611,49 @@ const MBMaxRegistration = () => {
               general_service_mgr_email: e.target.value,
             }))
           }
-        />
+        /></Box>
+        
+
+        </Box>
+        
 
         {/* Controller */}
-        <p id="controller">Controller</p>
-        <TextField
+        <Box
+          as="div"
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "10px",
+            margin: "auto",
+            justifyContent: "left",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
+            textAlign: "left",
+          }}
+        >
+        <p id="controller" style={{
+  color: "#000",
+  fontFamily: '"MB Corpo A Text Cond"',
+  fontSize: "32px",
+  // border: "2px solid red",
+  fontStyle: "normal",
+  fontWeight: "400",
+  display: "flex"
+  ,
+  // margin: "auto",
+  // alignItems: "start",
+  textAlign: "left",
+}}>Controller</p>
+<Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              columnGap: "10%",
+            }}
+          >
+<TextField
           id="controller_first_name"
           label="First Name"
           variant="standard"
@@ -557,6 +680,7 @@ const MBMaxRegistration = () => {
         <TextField
           id="controller_email"
           label="Email"
+          sx={{marginTop:2}}
           variant="standard"
           value={formData.controller_email}
           onChange={(e) =>
@@ -567,9 +691,46 @@ const MBMaxRegistration = () => {
           }
         />
 
+          </Box>
+        
+        </Box>
+
         {/* Billing Contact */}
-        <p id="billing_contact">Billing Contact</p>
-        <TextField
+        <Box
+          as="div"
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "10px",
+            margin: "auto",
+            justifyContent: "left",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
+            textAlign: "left",
+          }}
+        >  <p id="billing_contact" style={{
+          color: "#000",
+          fontFamily: '"MB Corpo A Text Cond"',
+          fontSize: "32px",
+          // border: "2px solid red",
+          fontStyle: "normal",
+          fontWeight: "400",
+          display: "flex"
+          ,
+          // margin: "auto",
+          // alignItems: "start",
+          textAlign: "left",
+        }}>Billing Contact</p>
+
+<Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              columnGap: "10%",
+            }}
+          >  <TextField
           id="billing_contact_first_name"
           label="First Name"
           variant="standard"
@@ -596,6 +757,7 @@ const MBMaxRegistration = () => {
         <TextField
           id="billing_contact_email"
           label="Email"
+          sx={{marginTop:2}}
           variant="standard"
           value={formData.billing_contact_email}
           onChange={(e) =>
@@ -604,11 +766,49 @@ const MBMaxRegistration = () => {
               billing_contact_email: e.target.value,
             }))
           }
-        />
+        />   </Box>
+
+       </Box>
+        
 
         {/* Marketing Team */}
-        <p id="marketing_team">Marketing Team</p>
-        <InputLabel id="marketing-team-label">Select One</InputLabel>
+        <Box
+          as="div"
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "10px",
+            margin: "auto",
+            justifyContent: "left",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
+            textAlign: "left",
+          }}
+        > 
+        <p id="marketing_team" style={{
+          color: "#000",
+          fontFamily: '"MB Corpo A Text Cond"',
+          fontSize: "32px",
+          // border: "2px solid red",
+          fontStyle: "normal",
+          fontWeight: "400",
+          display: "flex"
+          ,
+          // margin: "auto",
+          // alignItems: "start",
+          textAlign: "left",
+        }}>Marketing Team</p>
+        <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr",
+              columnGap: "10%",
+              width:268
+            }}
+          > 
+          <FormControl variant="standard" ><InputLabel id="marketing-team-label">Select One</InputLabel>
         <Select
           labelId="marketing-team-label"
           id="marketing-team"
@@ -625,10 +825,49 @@ const MBMaxRegistration = () => {
           <MenuItem value="">Select Team</MenuItem>
           <MenuItem value="one">ONE</MenuItem>
           <MenuItem value="two">TWO</MenuItem>
-        </Select>
+        </Select></FormControl>
+        
+        </Box>
+        </Box>
 
         {/* Marketing Contact */}
-        <p id="marketing_contact">Marketing Contact</p>
+
+        <Box
+          as="div"
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "10px",
+            margin: "auto",
+            justifyContent: "left",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
+            textAlign: "left",
+          }}
+        > 
+        <p id="marketing_contact" style={{
+          color: "#000",
+          fontFamily: '"MB Corpo A Text Cond"',
+          fontSize: "32px",
+          // border: "2px solid red",
+          fontStyle: "normal",
+          fontWeight: "400",
+          display: "flex"
+          ,
+          // margin: "auto",
+          // alignItems: "start",
+          textAlign: "left",
+        }}>Marketing Contact</p>
+         <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              columnGap: "10%",
+              
+            }}
+          > 
         <TextField
           id="marketing_contact_first_name"
           label="First Name"
@@ -656,6 +895,7 @@ const MBMaxRegistration = () => {
         <TextField
           id="marketing_contact_email"
           label="Email"
+          sx={{marginTop:2}}
           variant="standard"
           value={formData.marketing_contact_email}
           onChange={(e) =>
@@ -665,8 +905,32 @@ const MBMaxRegistration = () => {
             }))
           }
         />
+        </Box></Box>
 
         {/* DMS Provider */}
+        <Box
+          as="div"
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "10px",
+            margin: "auto",
+            justifyContent: "left",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
+            textAlign: "left",
+          }}
+        > 
+         <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              columnGap: "10%",
+              
+            }}
+          > 
         <TextField
           id="dms_provider"
           label="DMS Provider"
@@ -693,13 +957,38 @@ const MBMaxRegistration = () => {
             }))
           }
         />
+        </Box></Box>
 
         {/* BDC */}
-        <FormControl component="fieldset">
-          <FormLabel component="legend">
+        <Box
+          as="div"
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "10px",
+            margin: "auto",
+            justifyContent: "left",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
+            textAlign: "left",
+          }}
+        > 
+         <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "5fr 2fr",
+              // columnGap: "14%",
+              
+            }}
+          > 
+        {/* <FormControl component="fieldset" > */}
+          <FormLabel component="legend" sx={{justifyContent:"space-between", alignItems:"center", display:"flex"}} >
             Does your dealership have an established BDC?
           </FormLabel>
           <RadioGroup
+          sx={{textAlign:"right"}}
             aria-label="bdc"
             name="bdc"
             value={value || formData.dealership_bdc}
@@ -709,16 +998,718 @@ const MBMaxRegistration = () => {
             <FormControlLabel value="yes" control={<Radio />} label="Yes" />
             <FormControlLabel value="no" control={<Radio />} label="No" />
           </RadioGroup>
-        </FormControl>
+        {/* </FormControl> */}
+        </Box></Box>
+ {/* <sales hours> */}
+        <Box
+          as="div"
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "10px",
+            margin: "auto",
+            justifyContent: "left",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
+            textAlign: "left",
+          }}
+        > 
+         <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              columnGap: "4%",
+              rowGap:"3%"
+              
+            }}
+          > 
+          <div style={{borderRight:"1px solid #D9D9D9", paddingRight:14}}>
+            <p style={{
+          color: "#000",
+          fontFamily: '"MB Corpo A Text Cond"',
+          fontSize: "29px",
+          // border: "2px solid red",
+          fontStyle: "normal",
+          fontWeight: "400",
+          display: "flex"
+          ,
+          // margin: "auto",
+          // alignItems: "start",
+          textAlign: "left",
+        }}>
+          Sales Hours
+        </p>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:3
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Sun:</label><label for="appt" style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+              
+                <label style={{fontWeight:600,paddingTop:5, marginTop:"4%"}}>Mon:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+            
+
+
+
+<label style={{fontWeight:600,paddingTop:5}}>Tues:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+             
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Wed:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Thur:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+             
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Fri:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+             
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Sat:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+
+          </div>
+          <div style={{borderRight:"1px solid #D9D9D9", paddingRight:14}}>
+            <p style={{
+          color: "#000",
+          fontFamily: '"MB Corpo A Text Cond"',
+          fontSize: "29px",
+          // border: "2px solid red",
+          fontStyle: "normal",
+          fontWeight: "400",
+          display: "flex",
+
+          // margin: "auto",
+          // alignItems: "start",
+          textAlign: "left",
+        }}>
+          Service Hours
+        </p>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:3
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Sun:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+              
+                <label style={{fontWeight:600,paddingTop:5, marginTop:"4%"}}>Mon:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+            
+
+
+
+<label style={{fontWeight:600,paddingTop:5}}>Tues:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+             
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Wed:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Thur:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+             
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Fri:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+             
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Sat:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+
+          </div>
+
+
+
+          <div>
+            <p style={{
+          color: "#000",
+          fontFamily: '"MB Corpo A Text Cond"',
+          fontSize: "29px",
+          // border: "2px solid red",
+          fontStyle: "normal",
+          fontWeight: "400",
+          display: "flex"
+          ,
+          // margin: "auto",
+          // alignItems: "start",
+          textAlign: "left",
+        }}>
+          Parts Hours
+        </p>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:3
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Sun:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+              
+                <label style={{fontWeight:600,paddingTop:5, marginTop:"4%"}}>Mon:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+            
+
+
+
+<label style={{fontWeight:600,paddingTop:5}}>Tues:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+             
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Wed:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Thur:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+             
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Fri:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+             
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%",
+              marginTop:2
+              
+            }}>
+
+<label style={{fontWeight:600,paddingTop:5}}>Sat:</label><label for="appt"style={{fontSize:13, paddingTop:5}}>open:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+            <Box  sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              // columnGap: "2%",
+              rowGap:"3%"
+              
+            }}>
+
+<label></label><label for="appt" style={{fontSize:13, paddingTop:5}}>close:</label>
+ 
+ <Input type="time" id="appt" name="appt" min="09:00" max="18:00" value="17:26" required sx={{fontSize:14}} />
+            </Box>
+
+
+          </div>
+        
+        </Box>
+
+
+        
+        </Box>
+
 
         {/* FIXME Need to send array */}
-        <Container>
-          <p>Amenities</p>
+        <Box
+          as="div"
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "10px",
+            margin: "auto",
+            justifyContent: "left",
+            marginTop:4,
+            // alignItems: "center",
+            // border: "2px solid green",
+            textAlign: "left",
+          }}
+        > 
+          <p style={{
+          color: "#000",
+          fontFamily: '"MB Corpo A Text Cond"',
+          fontSize: "32px",
+          // border: "2px solid red",
+          fontStyle: "normal",
+          fontWeight: "400",
+          display: "flex"
+          ,
+          // margin: "auto",
+          // alignItems: "start",
+          textAlign: "left",
+        }}>Amenities</p>
+        <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              columnGap: "14%",
+              // rowGap:"3%"
+              
+            }}
+          > 
           <FormControlLabel
             control={
               <Checkbox
                 onChange={handleCheckboxChange}
                 value="Complimentary Wash and Vacuum with Service"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33,paddingTop:0 } }}
               />
             }
             label="Complimentary Wash and Vacuum with Service"
@@ -728,6 +1719,7 @@ const MBMaxRegistration = () => {
               <Checkbox
                 onChange={handleCheckboxChange}
                 value="Complimentary Multi-Point Inspection"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
               />
             }
             label="Complimentary Multi-Point Inspection"
@@ -737,13 +1729,143 @@ const MBMaxRegistration = () => {
               <Checkbox
                 onChange={handleCheckboxChange}
                 value="Complimentary High Speed WiFi"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
               />
             }
             label="Complimentary High Speed WiFi"
           />
-        </Container>
-        <Button type="submit">Submit</Button>
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Express Service"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Express Service"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Complimentary Pickup/Delivery"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Complimentary Pickup/Delivery"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Mobile Service"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Mobile Service"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Complimentary Shuttle"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Complimentary Shuttle"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Guest Lounge w/ Workstations & Outdoor Patio"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Guest Lounge w/ Workstations & Outdoor Patio"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Complimentary Mercedes-Benz Loaner"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Complimentary Mercedes-Benz Loaner"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Onsite Café with Fresh Food and Starbucks Drinks"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Onsite Café with Fresh Food and Starbucks Drinks"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Early Morning & After Hours Drop-off"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Early Morning & After Hours Drop-off"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Complimentary Coffee & Bottled Water"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Complimentary Coffee & Bottled Water"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Online Bill Payment Options"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Online Bill Payment Options"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="Complimentary Electric Vehicle Charging Stations"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33 } }}
+              />
+            }
+            label="Complimentary Electric Vehicle Charging Stations"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                onChange={handleCheckboxChange}
+                value="FlexPay"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 33, paddingTop:0 } }}
+              />
+            }
+            label="FlexPay"
+          />
+          </Box></Box>
+      <Button type="submit" sx={{backgroundColor:"#176DB7", borderRadius:0, color:"#fff", padding:"0, 6"}}>SUBMIT</Button>
+       
       </Box>
+      
+     </div>
+     
+    
+     
+
+
+      
     </>
   );
 };
