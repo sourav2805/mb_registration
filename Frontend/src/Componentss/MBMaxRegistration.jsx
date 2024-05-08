@@ -62,6 +62,10 @@ const MBMaxRegistration = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    // console.log(formData.dealer_code)
+    if( formData.dealer_code == "" || formData.dealership_name=="" 
+    ||formData.dealership_dba =="" ) return;
+    
     // console.log(formData);
     fetch(`http://localhost:3000/update-dealer/${formData.dealer_code}`, {
       method: "PUT",
@@ -121,6 +125,16 @@ const MBMaxRegistration = () => {
   };
   return (
     <>
+<div style={{
+          display: "flex",
+          flexDirection: "column",
+          margin: "auto",
+         
+          width: 750,
+        }}>
+          <p style={{textAlign:"left", fontSize:"1rem", marginTop:"1rem", marginBottom:"1rem"}}><a href="https://www.mercedesmax.com/">&lt; Back </a></p>
+        </div>
+
       <div
         style={{
           display: "flex",
@@ -131,6 +145,7 @@ const MBMaxRegistration = () => {
           width: 655,
         }}
       >
+       
         <Box
           sx={{
             color: "#000",
@@ -147,7 +162,7 @@ const MBMaxRegistration = () => {
 
         <Box
           sx={{
-            width: "536px",
+            width: "531px",
             height: "101px",
             color: "#000",
             textAlign: "center",
@@ -155,12 +170,13 @@ const MBMaxRegistration = () => {
             fontSize: "20px",
             fontStyle: "normal",
             fontWeight: "300",
+            marginBottom:"3%",
             lineHeight: "140%" /* 28px */,
           }}
         >
           Over the upcoming months, we will be sharing more and more details
-          about the new MAX program, the new marketing channels, and how to
-          optimize your marketing.
+          about the new MAX program, the new marketing 
+          channels, and how tooptimize your marketing.
         </Box>
       </div>
       {/* SECTION FORM */}
@@ -2223,6 +2239,7 @@ const MBMaxRegistration = () => {
                 // margin: "auto",
                 // alignItems: "start",
                 textAlign: "left",
+                marginBottom:"1%"
               }}
             >
               Amenities
