@@ -50,7 +50,7 @@ const MBMaxRegistration = () => {
     marketing_contact_dms_provider: "",
     marketing_contact_service_scheduler_provider: "",
     dealership_bdc: null,
-    amenities: [],
+    amenities: "",
   });
   const [value, setValue] = useState("");
   const handleChange = (event) => {
@@ -63,8 +63,8 @@ const MBMaxRegistration = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(formData);
-    fetch("http://localhost:3000/add-dealer", {
-      method: "POST",
+    fetch(`http://localhost:3000/update-dealer/${formData.dealer_code}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
@@ -88,8 +88,7 @@ const MBMaxRegistration = () => {
   // Function to handle checkbox change
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
-    let updatedAmenities = [...formData.amenities];
-
+    let updatedAmenities = formData.amenities;
     if (checked) {
       updatedAmenities.push(value);
     } else {
@@ -113,6 +112,9 @@ const MBMaxRegistration = () => {
       .then((response) => response.json())
       .then((data) => {
         setFormData(data);
+        const valueFromBackend = data.dealership_bdc.data[0] === 0 ? "no" : "yes";
+        setValue(valueFromBackend);
+        console.log(valueFromBackend)
       })
       .catch((error) => console.error("Error fetching record:", error));
   };
@@ -991,7 +993,7 @@ style={{
           sx={{textAlign:"right"}}
             aria-label="bdc"
             name="bdc"
-            value={value || formData.dealership_bdc}
+            value={value}
             onChange={handleChange}
             row
           >
