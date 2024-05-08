@@ -1,0 +1,701 @@
+.MB-max-registration {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .MB-max-registration .overlap-group-wrapper {
+    background-color: #ffffff;
+    height: 3692px;
+    overflow: hidden;
+    width: 1440px;
+  }
+  
+  .MB-max-registration .overlap-group {
+    height: 3692px;
+    position: relative;
+  }
+  
+  .MB-max-registration .CTA-instance {
+    left: 645px !important;
+    position: absolute !important;
+    top: 3402px !important;
+    width: 150px !important;
+  }
+  
+  .MB-max-registration .design-component-instance-node {
+    font-family: "MB Corpo S Text Office-Bold", Helvetica !important;
+    font-weight: 700 !important;
+    left: 44px !important;
+  }
+  
+  .MB-max-registration .amenities {
+    height: 447px;
+    left: 415px;
+    position: absolute;
+    top: 2946px;
+    width: 603px;
+  }
+  
+  .MB-max-registration .group {
+    height: 378px;
+    left: 316px;
+    position: absolute;
+    top: 69px;
+    width: 287px;
+  }
+  
+  .MB-max-registration .flexcontainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 378px;
+    left: 40px;
+    position: absolute;
+    top: 0;
+    width: 245px;
+  }
+  
+  /* .MB-max-registration .text {
+    align-self: stretch;
+    color: #666666;
+    font-family: "MB Corpo S Text-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 19.2px;
+    position: relative;
+  } */
+  
+  .MB-max-registration .text-wrapper {
+    color: #666666;
+    font-family: "MB Corpo S Text-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 19.2px;
+  }
+  
+  .MB-max-registration .checkbox-instance {
+    left: 0 !important;
+    position: absolute !important;
+    top: 277px !important;
+  }
+  
+  .MB-max-registration .checkbox-2 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 223px !important;
+  }
+  
+  .MB-max-registration .checkbox-3 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 170px !important;
+  }
+  
+  .MB-max-registration .checkbox-4 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 118px !important;
+  }
+  
+  .MB-max-registration .checkbox-5 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 84px !important;
+  }
+  
+  .MB-max-registration .checkbox-6 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 50px !important;
+  }
+  
+  .MB-max-registration .checkbox-7 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+  
+  .MB-max-registration .div {
+    height: 348px;
+    left: 0;
+    position: absolute;
+    top: 69px;
+    width: 287px;
+  }
+  
+  .MB-max-registration .flexcontainer-2 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 348px;
+    left: 40px;
+    position: absolute;
+    top: 0;
+    width: 245px;
+  }
+  
+  .MB-max-registration .checkbox-8 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 293px !important;
+  }
+  
+  .MB-max-registration .checkbox-9 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 257px !important;
+  }
+  
+  .MB-max-registration .checkbox-10 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 204px !important;
+  }
+  
+  .MB-max-registration .checkbox-11 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 152px !important;
+  }
+  
+  .MB-max-registration .checkbox-12 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 49px !important;
+  }
+  
+  .MB-max-registration .text-wrapper-2 {
+    color: #000000;
+    font-family: "MB Corpo A Text Cond-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 44.8px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .MB-max-registration .HOURS {
+    height: 623px;
+    left: 415px;
+    position: absolute;
+    top: 2288px;
+    width: 608px;
+  }
+  
+  .MB-max-registration .element {
+    height: 623px;
+    position: relative;
+  }
+  
+  .MB-max-registration .parts-hours {
+    height: 623px;
+    left: 450px;
+    position: absolute;
+    top: 0;
+    width: 160px;
+  }
+  
+  .MB-max-registration .saturday {
+    height: 55px;
+    left: 0;
+    position: absolute;
+    top: 568px;
+    width: 164px;
+  }
+  
+  .MB-max-registration .group-2 {
+    height: 21px;
+    left: 85px;
+    position: absolute;
+    top: 34px;
+    width: 75px;
+  }
+  
+  .MB-max-registration .line {
+    height: 1px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 20px;
+    width: 67px;
+  }
+  
+  .MB-max-registration .text-wrapper-3 {
+    color: #666666;
+    font-family: "MB Corpo S Text-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 19.6px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .MB-max-registration .dropdown-arrow {
+    height: 8px !important;
+    left: 62px !important;
+    position: absolute !important;
+    top: 6px !important;
+    width: 11px !important;
+  }
+  
+  .MB-max-registration .text-wrapper-4 {
+    color: #666666;
+    font-family: "MB Corpo S Text-Regular", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: 18.2px;
+    position: absolute;
+    top: 35px;
+    white-space: nowrap;
+  }
+  
+  .MB-max-registration .text-wrapper-5 {
+    color: #666666;
+    font-family: "MB Corpo S Text-Regular", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: 18.2px;
+    position: absolute;
+    top: 3px;
+    white-space: nowrap;
+  }
+  
+  .MB-max-registration .group-3 {
+    height: 21px;
+    left: 85px;
+    position: absolute;
+    top: 2px;
+    width: 75px;
+  }
+  
+  .MB-max-registration .text-wrapper-6 {
+    color: #666666;
+    font-family: "MB Corpo S Text-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 22.4px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .MB-max-registration .friday {
+    height: 55px;
+    left: 0;
+    position: absolute;
+    top: 483px;
+    width: 164px;
+  }
+  
+  .MB-max-registration .thursday {
+    height: 55px;
+    left: 0;
+    position: absolute;
+    top: 398px;
+    width: 164px;
+  }
+  
+  .MB-max-registration .text-wrapper-7 {
+    color: #666666;
+    font-family: "MB Corpo S Text-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 22.4px;
+    position: absolute;
+    top: 0;
+    width: 47px;
+  }
+  
+  .MB-max-registration .wednesday {
+    height: 55px;
+    left: 0;
+    position: absolute;
+    top: 313px;
+    width: 164px;
+  }
+  
+  .MB-max-registration .tuesday {
+    height: 55px;
+    left: 0;
+    position: absolute;
+    top: 228px;
+    width: 164px;
+  }
+  
+  .MB-max-registration .monday {
+    height: 55px;
+    left: 0;
+    position: absolute;
+    top: 143px;
+    width: 164px;
+  }
+  
+  .MB-max-registration .sunday {
+    height: 55px;
+    left: 0;
+    position: absolute;
+    top: 58px;
+    width: 164px;
+  }
+  
+  .MB-max-registration .service-hours {
+    height: 623px;
+    left: 225px;
+    position: absolute;
+    top: 0;
+    width: 165px;
+  }
+  
+  .MB-max-registration .sales-hours {
+    height: 623px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 160px;
+  }
+  
+  .MB-max-registration .img {
+    height: 606px;
+    left: 419px;
+    object-fit: cover;
+    position: absolute;
+    top: 8px;
+    width: 1px;
+  }
+  
+  .MB-max-registration .line-2 {
+    height: 606px;
+    left: 191px;
+    object-fit: cover;
+    position: absolute;
+    top: 8px;
+    width: 1px;
+  }
+  
+  .MB-max-registration .marketing-contact {
+    height: 162px;
+    left: 415px;
+    position: absolute;
+    top: 1950px;
+    width: 612px;
+  }
+  
+  .MB-max-registration .div-2 {
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 132px;
+    width: 282px;
+  }
+  
+  .MB-max-registration .line-3 {
+    height: 1px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 29px;
+    width: 280px;
+  }
+  
+  .MB-max-registration .input {
+    background: transparent;
+    border: none;
+    color: #666666;
+    font-family: "MB Corpo S Text-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 22.4px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .MB-max-registration .last {
+    height: 30px;
+    left: 330px;
+    position: absolute;
+    top: 68px;
+    width: 282px;
+  }
+  
+  .MB-max-registration .text-wrapper-8 {
+    color: #666666;
+    font-family: "MB Corpo S Text-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 22.4px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .MB-max-registration .div-3 {
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 68px;
+    width: 282px;
+  }
+  
+  .MB-max-registration .does-your-dealership {
+    height: 26px;
+    left: 415px;
+    position: absolute;
+    top: 2217px;
+    width: 526px;
+  }
+  
+  .MB-max-registration .text-wrapper-9 {
+    color: #666666;
+    font-family: "MB Corpo S Text-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 500px;
+    letter-spacing: 0;
+    line-height: 22.4px;
+    position: absolute;
+    top: 1px;
+    white-space: nowrap;
+  }
+  
+  .MB-max-registration .radio-button-instance {
+    left: 465px !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+  
+  .MB-max-registration .text-wrapper-10 {
+    color: #666666;
+    font-family: "MB Corpo S Text-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 400px;
+    letter-spacing: 0;
+    line-height: 22.4px;
+    position: absolute;
+    top: 1px;
+    white-space: nowrap;
+  }
+  
+  .MB-max-registration .radio-button-2 {
+    left: 365px !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+  
+  .MB-max-registration .p {
+    color: #666666;
+    font-family: "MB Corpo S Text-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 22.4px;
+    position: absolute;
+    top: 1px;
+    white-space: nowrap;
+  }
+  
+  .MB-max-registration .last-2 {
+    height: 30px;
+    left: 745px;
+    position: absolute;
+    top: 2147px;
+    width: 282px;
+  }
+  
+  .MB-max-registration .first {
+    height: 30px;
+    left: 415px;
+    position: absolute;
+    top: 2147px;
+    width: 282px;
+  }
+  
+  .MB-max-registration .marketing-team {
+    height: 98px;
+    left: 415px;
+    position: absolute;
+    top: 1817px;
+    width: 282px;
+  }
+  
+  .MB-max-registration .dropdown-arrow-42 {
+    height: 10px !important;
+    left: 268px !important;
+    position: absolute !important;
+    top: 8px !important;
+    width: 12px !important;
+  }
+  
+  .MB-max-registration .billing-contact {
+    height: 162px;
+    left: 415px;
+    position: absolute;
+    top: 1620px;
+    width: 612px;
+  }
+  
+  .MB-max-registration .controller {
+    height: 162px;
+    left: 415px;
+    position: absolute;
+    top: 1423px;
+    width: 612px;
+  }
+  
+  .MB-max-registration .general-service {
+    height: 162px;
+    left: 415px;
+    position: absolute;
+    top: 1226px;
+    width: 612px;
+  }
+  
+  .MB-max-registration .general-sales {
+    height: 162px;
+    left: 415px;
+    position: absolute;
+    top: 1029px;
+    width: 612px;
+  }
+  
+  .MB-max-registration .principal {
+    height: 162px;
+    left: 415px;
+    position: absolute;
+    top: 832px;
+    width: 612px;
+  }
+  
+  .MB-max-registration .address {
+    height: 230px;
+    left: 415px;
+    position: absolute;
+    top: 567px;
+    width: 610px;
+  }
+  
+  .MB-max-registration .DBA {
+    height: 30px;
+    left: 415px;
+    position: absolute;
+    top: 502px;
+    width: 282px;
+  }
+  
+  .MB-max-registration .name {
+    height: 30px;
+    left: 745px;
+    position: absolute;
+    top: 438px;
+    width: 282px;
+  }
+  
+  .MB-max-registration .code {
+    height: 30px;
+    left: 415px;
+    position: absolute;
+    top: 438px;
+    width: 282px;
+  }
+  
+  .MB-max-registration .vector {
+    height: 100px;
+    left: 996px;
+    position: absolute;
+    top: 2776px;
+    width: 100px;
+  }
+  
+  .MB-max-registration .text-wrapper-11 {
+    color: #000000;
+    font-family: "MB Corpo S Text-Light", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    left: 464px;
+    letter-spacing: 0;
+    line-height: 28px;
+    position: absolute;
+    text-align: center;
+    top: 288px;
+    width: 536px;
+  }
+  
+  .MB-max-registration .text-wrapper-12 {
+    color: #000000;
+    font-family: "MB Corpo A Title Cond Office-Regular", Helvetica;
+    font-size: 55px;
+    font-weight: 400;
+    left: 392px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 207px;
+  }
+  
+  .MB-max-registration .back {
+    color: #176db7;
+    font-family: "MB Corpo S Text Office-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 320px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 160px;
+    white-space: nowrap;
+    width: 116px;
+  }
+  
+  .MB-max-registration .group-4 {
+    height: 3692px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .MB-max-registration .mercedesmax-footer {
+    height: 104px;
+    left: 0;
+    position: absolute;
+    top: 3588px;
+    width: 1440px;
+  }
+  
+  .MB-max-registration .mercedesmax-top {
+    height: 100px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  

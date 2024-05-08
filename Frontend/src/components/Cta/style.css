@@ -1,0 +1,24 @@
+.CTA {
+    all: unset;
+    background-color: #176db7;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 32px;
+    position: relative;
+    width: 100px;
+  }
+  
+  .CTA .explore {
+    color: #ffffff;
+    font-family: "MB Corpo S Text Office-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 20px;
+    left: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 5px;
+  }
+  

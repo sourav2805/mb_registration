@@ -1,0 +1,1 @@
+export { MbMaxRegistration } from "./MbMaxRegistration";
