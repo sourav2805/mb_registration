@@ -149,6 +149,7 @@ app.get("/dealer-info/:dealer_code", (req, res) => {
 app.put("/update-dealer/:dealer_code", (req, res) => {
   const dealerCode = req.params.dealer_code;
   const dealerData = req.body;
+  console.log("LOL",dealerData)
   const dealershipBdcBuffer = convertBooleanToBuffer(dealerData.dealership_bdc);
   const sql = `
     UPDATE dealer_info
@@ -182,6 +183,53 @@ app.put("/update-dealer/:dealer_code", (req, res) => {
       marketing_contact_dms_provider = ?,
       marketing_contact_service_scheduler_provider = ?,
       dealership_bdc = ?,
+
+      sales_hours_sunday_open=?,
+      sales_hours_sunday_close=?,
+      sales_hours_monday_open=?,
+      sales_hours_monday_close=?,
+      sales_hours_tuesday_open=?,
+      sales_hours_tuesday_close=?,
+      sales_hours_wednesday_open=?,
+      sales_hours_wednesday_close=?,
+      sales_hours_thursday_open=?,
+      sales_hours_thursday_close=?,
+      sales_hours_friday_open=?,
+      sales_hours_friday_close=?,
+      sales_hours_saturday_open=?,
+      sales_hours_saturday_close=?,
+  
+      service_hours_sunday_open=?,
+      service_hours_sunday_close=?,
+      service_hours_monday_open=?,
+      service_hours_monday_close=?,
+      service_hours_tuesday_open=?,
+      service_hours_tuesday_close=?,
+      service_hours_wednesday_open=?,
+      service_hours_wednesday_close=?,
+      service_hours_thursday_open=?,
+      service_hours_thursday_close=?,
+      service_hours_friday_open=?,
+      service_hours_friday_close=?,
+      service_hours_saturday_open=?,
+      service_hours_saturday_close=?,
+  
+      parts_hours_sunday_open=?,
+      parts_hours_sunday_close=?,
+      parts_hours_monday_open=?,
+      parts_hours_monday_close=?,
+      parts_hours_tuesday_open=?,
+      parts_hours_tuesday_close=?,
+      parts_hours_wednesday_open=?,
+      parts_hours_wednesday_close=?,
+      parts_hours_thursday_open=?,
+      parts_hours_thursday_close=?,
+      parts_hours_friday_open=?,
+      parts_hours_friday_close=?,
+      parts_hours_saturday_open=?,
+      parts_hours_saturday_close=?,
+
+
       amenities = ?,
       marketing_team=?
     WHERE dealer_code = ?
@@ -220,6 +268,52 @@ app.put("/update-dealer/:dealer_code", (req, res) => {
     dealershipBdcBuffer,
     dealerData.amenities,
     dealerData.marketing_team,
+
+    dealerData.sales_hours_sunday_open,
+    dealerData.sales_hours_sunday_close,
+    dealerData.sales_hours_monday_open,
+    dealerData.sales_hours_monday_close,
+    dealerData.sales_hours_tuesday_open,
+    dealerData.sales_hours_tuesday_close,
+    dealerData.sales_hours_wednesday_open,
+    dealerData.sales_hours_wednesday_close,
+    dealerData.sales_hours_thursday_open,
+    dealerData.sales_hours_thursday_close,
+    dealerData.sales_hours_friday_open,
+    dealerData.sales_hours_friday_close,
+    dealerData.sales_hours_saturday_open,
+    dealerData.sales_hours_saturday_close,
+
+    dealerData.service_hours_sunday_open,
+    dealerData.service_hours_sunday_close,
+    dealerData.service_hours_monday_open,
+    dealerData.service_hours_monday_close,
+    dealerData.service_hours_tuesday_open,
+    dealerData.service_hours_tuesday_close,
+    dealerData.service_hours_wednesday_open,
+    dealerData.service_hours_wednesday_close,
+    dealerData.service_hours_thursday_open,
+    dealerData.service_hours_thursday_close,
+    dealerData.service_hours_friday_open,
+    dealerData.service_hours_friday_close,
+    dealerData.service_hours_saturday_open,
+    dealerData.service_hours_saturday_close,
+
+    dealerData.parts_hours_sunday_open,
+    dealerData.parts_hours_sunday_close,
+    dealerData.parts_hours_monday_open,
+    dealerData.parts_hours_monday_close,
+    dealerData.parts_hours_tuesday_open,
+    dealerData.parts_hours_tuesday_close,
+    dealerData.parts_hours_wednesday_open,
+    dealerData.parts_hours_wednesday_close,
+    dealerData.parts_hours_thursday_open,
+    dealerData.parts_hours_thursday_close,
+    dealerData.parts_hours_friday_open,
+    dealerData.parts_hours_friday_close,
+    dealerData.parts_hours_saturday_open,
+    dealerData.parts_hours_saturday_close,
+
     dealerCode,
   ];
 

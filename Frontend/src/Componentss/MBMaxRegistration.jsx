@@ -21,11 +21,10 @@ import {
 import { StateCodes } from "./StateCode";
 
 // BASE URL Local
-// const backend_url = "http://localhost:3000";
+const backend_url = "http://localhost:3000";
 
 // API Gateway DEV
-const backend_url =
-  "https://fmebhqzrp9.execute-api.us-east-1.amazonaws.com/DEV";
+// const backend_url = "https://fmebhqzrp9.execute-api.us-east-1.amazonaws.com/DEV"
 
 // API Gateway PROD
 // const backend_url = "https://fmebhqzrp9.execute-api.us-east-1.amazonaws.com/PROD/"
@@ -64,6 +63,50 @@ const MBMaxRegistration = () => {
     marketing_contact_dms_provider: "",
     marketing_contact_service_scheduler_provider: "",
     dealership_bdc: null,
+    sales_hours_sunday_open: "",
+    sales_hours_sunday_close: "",
+    sales_hours_monday_open: "",
+    sales_hours_monday_close: "",
+    sales_hours_tuesday_open: "",
+    sales_hours_tuesday_close: "",
+    sales_hours_wednesday_open: "",
+    sales_hours_wednesday_close: "",
+    sales_hours_thursday_open: "",
+    sales_hours_thursday_close: "",
+    sales_hours_friday_open: "",
+    sales_hours_friday_close: "",
+    sales_hours_saturday_open: "",
+    sales_hours_saturday_close: "",
+
+    service_hours_sunday_open: "",
+    service_hours_sunday_close: "",
+    service_hours_monday_open: "",
+    service_hours_monday_close: "",
+    service_hours_tuesday_open: "",
+    service_hours_tuesday_close: "",
+    service_hours_wednesday_open: "",
+    service_hours_wednesday_close: "",
+    service_hours_thursday_open: "",
+    service_hours_thursday_close: "",
+    service_hours_friday_open: "",
+    service_hours_friday_close: "",
+    service_hours_saturday_open: "",
+    service_hours_saturday_close: "",
+
+    parts_hours_sunday_open: "",
+    parts_hours_sunday_close: "",
+    parts_hours_monday_open: "",
+    parts_hours_monday_close: "",
+    parts_hours_tuesday_open: "",
+    parts_hours_tuesday_close: "",
+    parts_hours_wednesday_open: "",
+    parts_hours_wednesday_close: "",
+    parts_hours_thursday_open: "",
+    parts_hours_thursday_close: "",
+    parts_hours_friday_open: "",
+    parts_hours_friday_close: "",
+    parts_hours_saturday_open: "",
+    parts_hours_saturday_close: "",
     amenities: "",
     marketing_team: "",
   });
@@ -1206,27 +1249,8 @@ const MBMaxRegistration = () => {
                     marginTop: 3,
                   }}
                 >
-                  <label
-                    style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}
-                  >
-                    Sun:
-                  </label>
-                  <label
-                    for="appt"
-                    style={{
-                      fontSize: 13,
-                      paddingTop: 5,
-                      fontFamily: "MBCorpoSText",
-                    }}
-                  >
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sun:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
                   <div
@@ -1237,11 +1261,15 @@ const MBMaxRegistration = () => {
                     {/* Original input */}
                     <Input
                       type="time"
-                      id="appt"
-                      name="appt"
-                      min="09:00"
-                      max="18:00"
-                      value="17:26"
+                      id="sales_hours_sunday_open"
+                      name="sales_hours_sunday_open"
+                      value={formData.sales_hours_sunday_open}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          sales_hours_sunday_open: e.target.value,
+                        })
+                      }
                       required
                       sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1250,11 +1278,9 @@ const MBMaxRegistration = () => {
 
                   {/* <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_sunday_open"
+                    name="sales_hours_sunday_open"
+                    value={formData.sales_hours_sunday_open}
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1270,24 +1296,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label
-                    for="appt"
-                    style={{
-                      fontSize: 13,
-                      paddingTop: 5,
-                      fontFamily: "MBCorpoSText",
-                    }}
-                  >
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_sunday_close"
+                    name="sales_hours_sunday_close"
+                    value={formData.sales_hours_sunday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_sunday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1316,18 +1339,21 @@ const MBMaxRegistration = () => {
                   >
                     Mon:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_monday_open"
+                    name="sales_hours_monday_open"
+                    value={formData.sales_hours_monday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_monday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1343,18 +1369,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_monday_close"
+                    name="sales_hours_monday_close"
+                    value={formData.sales_hours_monday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_monday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1380,18 +1409,21 @@ const MBMaxRegistration = () => {
                     }}>
                     Tues:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_tuesday_open"
+                    name="sales_hours_tuesday_open"
+                    value={formData.sales_hours_tuesday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_tuesday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1407,18 +1439,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_tuesday_close"
+                    name="sales_hours_tuesday_close"
+                    value={formData.sales_hours_tuesday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_tuesday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1433,27 +1468,22 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Wed:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Wed:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_wednesday_open"
+                    name="sales_hours_wednesday_open"
+                    value={formData.sales_hours_wednesday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_wednesday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1469,18 +1499,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_wednesday_close"
+                    name="sales_hours_wednesday_close"
+                    value={formData.sales_hours_wednesday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_wednesday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1506,18 +1539,21 @@ const MBMaxRegistration = () => {
                     }}>
                     Thur:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_thursday_open"
+                    name="sales_hours_thursday_open"
+                    value={formData.sales_hours_thursday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_thursday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1533,18 +1569,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_thursday_close"
+                    name="sales_hours_thursday_close"
+                    value={formData.sales_hours_thursday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_thursday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1559,27 +1598,22 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Fri:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Fri:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_friday_open"
+                    name="sales_hours_friday_open"
+                    value={formData.sales_hours_friday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_friday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1595,18 +1629,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_friday_close"
+                    name="sales_hours_friday_close"
+                    value={formData.sales_hours_friday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_friday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1621,27 +1658,22 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Sat:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sat:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_saturday_open"
+                    name="sales_hours_saturday_open"
+                    value={formData.sales_hours_saturday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_saturday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1657,18 +1689,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="sales_hours_saturday_close"
+                    name="sales_hours_saturday_close"
+                    value={formData.sales_hours_saturday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        sales_hours_saturday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1704,27 +1739,22 @@ const MBMaxRegistration = () => {
                     marginTop: 3,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Sun:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sun:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_sunday_open"
+                    name="service_hours_sunday_open"
+                    value={formData.service_hours_sunday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_sunday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1740,18 +1770,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_sunday_close"
+                    name="service_hours_sunday_close"
+                    value={formData.service_hours_sunday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_sunday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1780,18 +1813,21 @@ const MBMaxRegistration = () => {
                   >
                     Mon:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_monday_open"
+                    name="service_hours_monday_open"
+                    value={formData.service_hours_monday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_monday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1807,18 +1843,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_monday_close"
+                    name="service_hours_monday_close"
+                    value={formData.service_hours_monday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_monday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1844,18 +1883,21 @@ const MBMaxRegistration = () => {
                     }}>
                     Tues:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_tuesday_open"
+                    name="service_hours_tuesday_open"
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_tuesday_open: e.target.value,
+                      })
+                    }
+                    value={formData.service_hours_tuesday_open}
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1871,18 +1913,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_tuesday_close"
+                    name="service_hours_tuesday_close"
+                    value={formData.service_hours_tuesday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_tuesday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1897,27 +1942,22 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Wed:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Wed:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_wednesday_open"
+                    name="service_hours_wednesday_open"
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_wednesday_open: e.target.value,
+                      })
+                    }
+                    value={formData.service_hours_wednesday_open}
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1933,18 +1973,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_wednesday_close"
+                    name="service_hours_wednesday_close"
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_wednesday_close: e.target.value,
+                      })
+                    }
+                    value={formData.service_hours_wednesday_close}
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1970,18 +2013,21 @@ const MBMaxRegistration = () => {
                     }}>
                     Thur:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_thursday_open"
+                    name="service_hours_thursday_open"
+                    value={formData.service_hours_thursday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_thursday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -1997,18 +2043,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_thursday_close"
+                    name="service_hours_thursday_close"
+                    value={formData.service_hours_thursday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_thursday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2023,27 +2072,22 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Fri:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Fri:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_friday_open"
+                    name="service_hours_friday_open"
+                    value={formData.service_hours_friday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_friday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2059,18 +2103,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_friday_close"
+                    name="service_hours_friday_close"
+                    value={formData.service_hours_friday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_friday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2085,27 +2132,22 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Sat:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sat:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_saturday_open"
+                    name="service_hours_saturday_open"
+                    value={formData.service_hours_saturday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_saturday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2121,18 +2163,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="service_hours_saturday_close"
+                    name="service_hours_saturday_close"
+                    value={formData.service_hours_saturday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        service_hours_saturday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2166,27 +2211,22 @@ const MBMaxRegistration = () => {
                     marginTop: 3,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Sun:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sun:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_sunday_open"
+                    name="parts_hours_sunday_open"
+                    value={formData.parts_hours_sunday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_sunday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2202,18 +2242,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_sunday_close"
+                    name="parts_hours_sunday_close"
+                    value={formData.parts_hours_sunday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_sunday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2242,18 +2285,21 @@ const MBMaxRegistration = () => {
                   >
                     Mon:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_monday_open"
+                    name="parts_hours_monday_open"
+                    value={formData.parts_hours_monday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_monday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2269,18 +2315,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_monday_close"
+                    name="parts_hours_monday_close"
+                    value={formData.parts_hours_monday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_monday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2306,18 +2355,21 @@ const MBMaxRegistration = () => {
                     }}>
                     Tues:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_tuesday_open"
+                    name="parts_hours_tuesday_open"
+                    value={formData.parts_hours_tuesday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_tuesday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2333,18 +2385,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_tuesday_close"
+                    name="parts_hours_tuesday_close"
+                    value={formData.parts_hours_tuesday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_tuesday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2359,27 +2414,22 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Wed:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Wed:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_wednesday_open"
+                    name="parts_hours_wednesday_open"
+                    value={formData.parts_hours_wednesday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_wednesday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2395,18 +2445,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_wednesday_close"
+                    name="parts_hours_wednesday_close"
+                    value={formData.parts_hours_wednesday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_wednesday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2432,18 +2485,21 @@ const MBMaxRegistration = () => {
                     }}>
                     Thur:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_thursday_open"
+                    name="parts_hours_thursday_open"
+                    value={formData.parts_hours_thursday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_thursday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2459,18 +2515,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_thursday_close"
+                    name="parts_hours_thursday_close"
+                    value={formData.parts_hours_thursday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_thursday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2485,27 +2544,22 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Fri:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Fri:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_friday_open"
+                    name="parts_hours_friday_open"
+                    value={formData.parts_hours_friday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_friday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2521,18 +2575,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_friday_close"
+                    name="parts_hours_friday_close"
+                    value={formData.parts_hours_friday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_friday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2547,27 +2604,22 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label   style={{
-                      fontWeight: 700,
-                      paddingTop: 2,
-                      marginTop: "4%",
-                      fontFamily: "MBCorpoSText",
-                      fontSize: 16,
-                      lineHeight: "140%",
-                      color: "#666",
-                    }}>Sat:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sat:</label>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_saturday_open"
+                    name="parts_hours_saturday_open"
+                    value={formData.parts_hours_saturday_open}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_saturday_open: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
@@ -2583,18 +2635,21 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                      color: "#666",fontWeight: 400, }}>
+                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     close:
                   </label>
 
                   <Input
                     type="time"
-                    id="appt"
-                    name="appt"
-                    min="09:00"
-                    max="18:00"
-                    value="17:26"
+                    id="parts_hours_saturday_close"
+                    name="parts_hours_saturday_close"
+                    value={formData.parts_hours_saturday_close}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        parts_hours_saturday_close: e.target.value,
+                      })
+                    }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
                     color: "#666",fontWeight: 400, }}
