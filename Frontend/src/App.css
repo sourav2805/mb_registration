@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'MBCorpoAScreen1Cond'; /*a name to be used later*/
-  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoAScreen1Cond/MBCorpoAScreen1Cond-Regular-Web.eot'); /*URL to font*/
-}
+
 
 #root {
   max-width: 1280px;
@@ -13,11 +10,58 @@
    
   color: #176DB7 !important;
 }
-.css-1rx2jnp-MuiButtonBase-root-MuiButton-root:hover {
+.css-86pfy1-MuiButtonBase-root-MuiButton-root {
  
   background-color: #176DB7 !important;
+  padding: 5px 50px !important;
 }
 
+.css-1rx2jnp-MuiButtonBase-root-MuiButton-root:hover {background-color: #176DB7 !important;}
+
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root{
+  font-family: MBCorpoSText !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 140% !important; 
+  color: #666 !important;
+}
+
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+
+  font-family: MBCorpoSText !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 140% !important; 
+  color: #666 !important;
+}
+.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input {
+  font-family: MBCorpoSText !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 140% !important; 
+  color: #666 !important;
+}
+
+.css-ahj2mt-MuiTypography-root {
+  margin: 0;
+  font-family: MBCorpoSText !important;
+  font-weight: 400;
+  padding-top: 4px !important;
+  font-size: 16px !important;
+  line-height: 140% !important;
+  color: #666;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: #666 !important;
+border-radius: 0 !important;}
 
 /* Hide the calendar picker indicator */
 input[type="time"]::-webkit-calendar-picker-indicator {
@@ -37,3 +81,68 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   bottom: 0;
   cursor: pointer; 
 } */
+@font-face {
+  font-family: 'MBCorpoSText-Bold';
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Bold-Web.eot');
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Bold-Web.eot?#iefix') format('embedded-opentype'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Bold-Web.woff2') format('woff2'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Bold-Web.woff') format('woff'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Bold-Web.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MBCorpoSText-Light';
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Light-Web.eot');
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Light-Web.eot?#iefix') format('embedded-opentype'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Light-Web.woff2') format('woff2'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Light-Web.woff') format('woff'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Light-Web.svg') format('svg');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MBCorpoSText-Regular';
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Regular-Web.eot');
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Regular-Web.eot?#iefix') format('embedded-opentype'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Regular-Web.woff2') format('woff2'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Regular-Web.woff') format('woff'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Regular-Web.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MBCorpoATitleCondOffice';
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoATitleCond/MBCorpoATitleCond-Regular-Web.eot');
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoATitleCond/MBCorpoATitleCond-Regular-Web.eot?#iefix') format('embedded-opentype'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoATitleCond/MBCorpoATitleCond-Regular-Web.woff2') format('woff2'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoATitleCond/MBCorpoATitleCond-Regular-Web.woff') format('woff'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoATitleCond/MBCorpoATitleCond-Regular-Web.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MBCorpoATextCond';
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoATextCond/MBCorpoATextCond-Regular-Web.eot');
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoATextCond/MBCorpoATextCond-Regular-Web.eot?#iefix') format('embedded-opentype'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoATextCond/MBCorpoATextCond-Regular-Web.woff2') format('woff2'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoATextCond/MBCorpoATextCond-Regular-Web.woff') format('woff'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoATextCond/MBCorpoATextCond-Regular-Web.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MBCorpoSText';
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Regular-Web.eot');
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Regular-Web.eot?#iefix') format('embedded-opentype'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Regular-Web.woff2') format('woff2'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Regular-Web.woff') format('woff'),
+       url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoSText/MBCorpoSText-Regular-Web.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
