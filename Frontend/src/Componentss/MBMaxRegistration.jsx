@@ -17,6 +17,16 @@ import {
   RadioGroup,
   Select,
 } from "@mui/material";
+
+// const backend_url = "http://localhost:3000"
+
+// API Gateway DEV
+const backend_url = "https://fmebhqzrp9.execute-api.us-east-1.amazonaws.com/DEV"
+
+// API Gateway PROD
+// const backend_url = "https://fmebhqzrp9.execute-api.us-east-1.amazonaws.com/PROD/"
+console.log("backend_url:", backend_url);
+
 const MBMaxRegistration = () => {
   const [formData, setFormData] = useState({
     dealer_code: "",
@@ -67,7 +77,7 @@ const MBMaxRegistration = () => {
     ||formData.dealership_dba =="" ) return;
     
     // console.log(formData);
-    fetch(`http://localhost:3000/update-dealer/${formData.dealer_code}`, {
+    fetch(`${backend_url}/update-dealer/${formData.dealer_code}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +122,7 @@ const MBMaxRegistration = () => {
     console.log(formData.dealer_code);
   };
   const fetchRecordFromBackend = (dealerCode) => {
-    fetch(`http://localhost:3000/dealer-info/${dealerCode}`)
+    fetch(`${backend_url}/dealer-info/${dealerCode}`)
       .then((response) => response.json())
       .then((data) => {
         setFormData(data);
