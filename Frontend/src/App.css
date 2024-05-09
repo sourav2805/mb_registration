@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'MBCorpoAScreen1Cond'; /*a name to be used later*/
+  src: url('https://mercedes-max-dealer-form.s3.amazonaws.com/fonts/MBCorpoAScreen1Cond/MBCorpoAScreen1Cond-Regular-Web.eot'); /*URL to font*/
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -12,3 +17,23 @@
  
   background-color: #176DB7 !important;
 }
+
+
+/* Hide the calendar picker indicator */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  /* visibility: hidden; */
+  background-image: url("https://mercedes-max-dealer-form.s3.amazonaws.com/icon/dropdownicon.png");
+  width: 0.6em;
+  height: 0.6em;
+  object-fit: cover;
+}
+
+/* Ensure the input remains clickable */
+/* .input-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer; 
+} */

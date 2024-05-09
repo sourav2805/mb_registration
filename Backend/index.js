@@ -182,7 +182,8 @@ app.put("/update-dealer/:dealer_code", (req, res) => {
       marketing_contact_dms_provider = ?,
       marketing_contact_service_scheduler_provider = ?,
       dealership_bdc = ?,
-      amenities = ?
+      amenities = ?,
+      marketing_team=?
     WHERE dealer_code = ?
   `;
 
@@ -218,6 +219,7 @@ app.put("/update-dealer/:dealer_code", (req, res) => {
     dealerData.marketing_contact_service_scheduler_provider,
     dealershipBdcBuffer,
     dealerData.amenities,
+    dealerData.marketing_team,
     dealerCode,
   ];
 

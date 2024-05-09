@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import TextField from "@mui/material/TextField";
 
+// import AccessTimeIcon from '@mui/icons-material/AccessTime'; // Assuming this is your custom clock icon
 import Box from "@mui/material/Box";
 import {
   Button,
@@ -17,8 +18,10 @@ import {
   RadioGroup,
   Select,
 } from "@mui/material";
+import { StateCodes } from "./StateCode";
 
-// const backend_url = "http://localhost:3000"
+// BASE URL Local
+// const backend_url = "http://localhost:3000";
 
 // API Gateway DEV
 const backend_url = "https://fmebhqzrp9.execute-api.us-east-1.amazonaws.com/DEV"
@@ -61,6 +64,7 @@ const MBMaxRegistration = () => {
     marketing_contact_service_scheduler_provider: "",
     dealership_bdc: null,
     amenities: "",
+    marketing_team: "",
   });
   const [value, setValue] = useState("");
   const handleChange = (event) => {
@@ -75,7 +79,7 @@ const MBMaxRegistration = () => {
     // console.log(formData.dealer_code)
     if( formData.dealer_code == "" || formData.dealership_name=="" 
     ||formData.dealership_dba =="" ) return;
-    
+
     // console.log(formData);
     fetch(`${backend_url}/update-dealer/${formData.dealer_code}`, {
       method: "PUT",
@@ -135,15 +139,26 @@ const MBMaxRegistration = () => {
   };
   return (
     <>
-<div style={{
+      <div
+        style={{
           display: "flex",
           flexDirection: "column",
           margin: "auto",
-         
+
           width: 750,
-        }}>
-          <p style={{textAlign:"left", fontSize:"1rem", marginTop:"1rem", marginBottom:"1rem"}}><a href="https://www.mercedesmax.com/">&lt; Back </a></p>
-        </div>
+        }}
+      >
+        <p
+          style={{
+            textAlign: "left",
+            fontSize: "1rem",
+            marginTop: "1rem",
+            marginBottom: "1rem",
+          }}
+        >
+          <a href="https://www.mercedesmax.com/">&lt; Back </a>
+        </p>
+      </div>
 
       <div
         style={{
@@ -155,7 +170,6 @@ const MBMaxRegistration = () => {
           width: 655,
         }}
       >
-       
         <Box
           sx={{
             color: "#000",
@@ -186,7 +200,7 @@ const MBMaxRegistration = () => {
         >
           Over the upcoming months, we will be sharing more and more details
           about the new MAX program, the new marketing 
-          channels, and how tooptimize your marketing.
+          channels, and how to optimize your marketing.
         </Box>
       </div>
       {/* SECTION FORM */}
@@ -352,9 +366,11 @@ const MBMaxRegistration = () => {
                   }
                 >
                   <MenuItem value="">Select State</MenuItem>
-                  <MenuItem value="AL">Alabama</MenuItem>
-                  <MenuItem value="AK">Alaska</MenuItem>
-                  <MenuItem value="AZ">Arizona</MenuItem>
+                  {Object.keys(StateCodes).map((stateName) => (
+                    <MenuItem key={stateName} value={StateCodes[stateName]}>
+                      {stateName}
+                    </MenuItem>
+                  ))}
                 </Select>
               </FormControl>
               <TextField
@@ -859,17 +875,17 @@ const MBMaxRegistration = () => {
                   id="marketing-team"
                   label="Marketing Team"
                   variant="standard"
-                  value={formData.marketingTeam}
+                  value={formData.marketing_team}
                   onChange={(e) =>
                     setFormData((prevFormData) => ({
                       ...prevFormData,
-                      marketingTeam: e.target.value,
+                      marketing_team: e.target.value,
                     }))
                   }
                 >
-                  <MenuItem value="">Select Team</MenuItem>
-                  <MenuItem value="one">ONE</MenuItem>
-                  <MenuItem value="two">TWO</MenuItem>
+                  <MenuItem value="in_house">In-House</MenuItem>
+                  <MenuItem value="outside_agency">Outside Agency</MenuItem>
+                  <MenuItem value="none">None</MenuItem>
                 </Select>
               </FormControl>
             </Box>
@@ -1113,8 +1129,25 @@ const MBMaxRegistration = () => {
                   <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
                     open:
                   </label>
+                  <div
+                    style={{ position: "relative", display: "inline-block" }}
+                  >
+                    {/* Custom clock icon */}
 
-                  <Input
+                    {/* Original input */}
+                    <Input
+                      type="time"
+                      id="appt"
+                      name="appt"
+                      min="09:00"
+                      max="18:00"
+                      value="17:26"
+                      required
+                      sx={{ fontSize: 14 }}
+                    />
+                  </div>
+
+                  {/* <Input
                     type="time"
                     id="appt"
                     name="appt"
@@ -1123,7 +1156,7 @@ const MBMaxRegistration = () => {
                     value="17:26"
                     required
                     sx={{ fontSize: 14 }}
-                  />
+                  /> */}
                 </Box>
 
                 <Box
