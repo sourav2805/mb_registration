@@ -21,10 +21,10 @@ import {
 import { StateCodes } from "./StateCode";
 
 // BASE URL Local
-const backend_url = "http://localhost:3000";
+// const backend_url = "http://localhost:3000";
 
 // API Gateway DEV
-// const backend_url = "https://fmebhqzrp9.execute-api.us-east-1.amazonaws.com/DEV"
+const backend_url = "https://fmebhqzrp9.execute-api.us-east-1.amazonaws.com/DEV"
 
 // API Gateway PROD
 // const backend_url = "https://fmebhqzrp9.execute-api.us-east-1.amazonaws.com/PROD/"
@@ -174,7 +174,13 @@ const MBMaxRegistration = () => {
     console.log(formData.dealer_code);
   };
   const fetchRecordFromBackend = (dealerCode) => {
-    fetch(`${backend_url}/dealer-info/${dealerCode}`)
+    fetch(`${backend_url}/dealer-info/${dealerCode}`, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': '*',
+        'Access-Control-Allow-Headers': '*'
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
         setFormData(data);
