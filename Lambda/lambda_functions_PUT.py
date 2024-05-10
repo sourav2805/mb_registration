@@ -111,6 +111,7 @@ def lambda_handler(event, context):
  
     WHERE dealer_code = %s
     """
+    logger.info("sql %s", sql)
     
     # Extract values from the request body
     values = (
@@ -189,25 +190,29 @@ def lambda_handler(event, context):
         request_body.get('marketing_team'),
         dealer_code
     )
+    logger.info("values %s", values)
     
     # Execute the SQL UPDATE query
     try:
+        # cursor = connection_pool.cursor()
+        # cursor.execute(sql, values)
+        # connection_pool.commit()
+        # cursor.close()
         with connection_pool.cursor() as cursor:
             cursor.execute(sql, values)
-            print("values:", values)
-            connection_pool.commit()
-            logger.info("Update successful")
-            return {
-                'statusCode': 200,
-                'headers': {
-                    'Access-Control-Allow-Headers': 'Content-Type',
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Methods': 'OPTIONS,PUT',
-                    'Cache-Control': 'no-cache, no-store, must-revalidate',
-                    "Expires": '0'
-                },
-                'body': '{"message": "Dealer info updated successfully"}'
-            }
+        connection_pool.commit()
+        logger.info("Update successful")
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'OPTIONS,PUT',
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                "Expires": '0'
+            },
+            'body': '{"message": "Dealer info updated successfully"}'
+        }
     except Exception as e:
         logger.error("Error updating dealer info: %s", e)
         return {
@@ -220,3 +225,5 @@ def lambda_handler(event, context):
             },
             'body': '{"message": "Error updating dealer info"}'
         }
+    finally:
+        connection_pool.close()
