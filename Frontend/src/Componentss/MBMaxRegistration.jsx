@@ -109,6 +109,23 @@ const MBMaxRegistration = () => {
     parts_hours_saturday_close: "",
     amenities: "",
     marketing_team: "",
+
+    amenities_1:"false",
+    amenities_2:"false",
+    amenities_3:"false",
+    amenities_4:"false",
+    amenities_5:"false",
+    amenities_6:"false",
+    amenities_7:"false",
+    amenities_8:"false",
+    amenities_9:"false",
+    amenities_10:"false",
+    amenities_11:"false",
+    amenities_12:"false",
+    amenities_13:"false",
+    amenities_14:"false",
+    amenities_15:"false"
+    
   });
   const [value, setValue] = useState("");
   const handleChange = (event) => {
@@ -1257,8 +1274,18 @@ const MBMaxRegistration = () => {
                     marginTop: 3,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sun:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Sun:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
                   <div
@@ -1304,7 +1331,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -1347,7 +1378,11 @@ const MBMaxRegistration = () => {
                   >
                     Mon:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -1377,7 +1412,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -1417,7 +1456,11 @@ const MBMaxRegistration = () => {
                     }}>
                     Tues:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -1447,7 +1490,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -1476,8 +1523,18 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Wed:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Wed:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -1507,7 +1564,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -1547,7 +1608,11 @@ const MBMaxRegistration = () => {
                     }}>
                     Thur:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -1564,7 +1629,7 @@ const MBMaxRegistration = () => {
                     }
                     required
                     sx={{ fontSize: 14,fontFamily: "MBCorpoSText", lineHeight: "140%",
-                    color: "#666",fontWeight: 400, }}
+                    color: "#666",fontWeight: 400 }}
                   />
                 </Box>
 
@@ -1577,7 +1642,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -1606,8 +1675,18 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Fri:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Fri:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -1637,7 +1716,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -1666,8 +1749,18 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sat:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666",}}>Sat:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -1697,7 +1790,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -1747,8 +1844,18 @@ const MBMaxRegistration = () => {
                     marginTop: 3,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sun:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Sun:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -1778,7 +1885,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -1821,7 +1932,11 @@ const MBMaxRegistration = () => {
                   >
                     Mon:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -1851,7 +1966,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -1891,7 +2010,11 @@ const MBMaxRegistration = () => {
                     }}>
                     Tues:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -1921,7 +2044,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -1950,8 +2077,18 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Wed:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Wed:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -1981,7 +2118,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2021,7 +2162,11 @@ const MBMaxRegistration = () => {
                     }}>
                     Thur:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -2051,7 +2196,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2080,8 +2229,18 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Fri:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Fri:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -2111,7 +2270,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2140,8 +2303,18 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sat:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Sat:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -2171,7 +2344,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2219,8 +2396,18 @@ const MBMaxRegistration = () => {
                     marginTop: 3,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sun:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Sun:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -2250,7 +2437,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2293,7 +2484,11 @@ const MBMaxRegistration = () => {
                   >
                     Mon:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -2323,7 +2518,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2363,7 +2562,11 @@ const MBMaxRegistration = () => {
                     }}>
                     Tues:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -2393,7 +2596,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2422,8 +2629,18 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Wed:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Wed:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -2453,7 +2670,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2493,7 +2714,11 @@ const MBMaxRegistration = () => {
                     }}>
                     Thur:
                   </label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -2523,7 +2748,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2552,8 +2781,18 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Fri:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Fri:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -2583,7 +2822,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2612,8 +2855,18 @@ const MBMaxRegistration = () => {
                     marginTop: 2,
                   }}
                 >
-                  <label style={{ fontWeight: 600, paddingTop: 5 }}>Sat:</label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label style={{ fontWeight: 700,
+                        paddingTop: 2,
+                        marginTop: "4%",
+                        fontFamily: "MBCorpoSText",
+                        fontSize: 16,
+                        lineHeight: "140%",
+                        color: "#666", }}>Sat:</label>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     open:
                   </label>
 
@@ -2643,7 +2896,11 @@ const MBMaxRegistration = () => {
                   }}
                 >
                   <label></label>
-                  <label for="appt" style={{ fontSize: 13, paddingTop: 5 }}>
+                  <label for="appt" style={{
+                      fontSize: 13,
+                      paddingTop: 5,
+                      fontFamily: "MBCorpoSText",
+                    }}>
                     close:
                   </label>
 
@@ -2711,10 +2968,16 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Complimentary Wash and Vacuum with Service"
+                    // onChange={handleCheckboxChange}
+                    onChange={(e)=>setFormData({
+                      ...formData,
+                      amenities_1: e.target.checked ? 'true' : 'false',
+                    })}
+                    // value={formData.amenities_1}
+                    checked={formData.amenities_1 === 'true'}
+                    name="amenities_1"
                     sx={{
-                      "& .MuiSvgIcon-root": { fontSize: 33, paddingTop: 0 },
+                      "& .MuiSvgIcon-root": { fontSize: 33, paddingTop: 0 }
                     }}
                   />
                 }
@@ -2723,8 +2986,13 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Complimentary Multi-Point Inspection"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_2: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_2 === 'true'}
+                  name="amenities_2"
+                    
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2733,8 +3001,13 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Complimentary High Speed WiFi"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_3: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_3 === 'true'}
+                  name="amenities_3"
+                 
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2743,8 +3016,13 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Express Service"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_4: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_4 === 'true'}
+                  name="amenities_4"
+                   
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2753,8 +3031,12 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Complimentary Pickup/Delivery"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_5: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_5 === 'true'}
+                  name="amenities_5"
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2763,8 +3045,12 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Mobile Service"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_6: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_6 === 'true'}
+                  name="amenities_6"
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2773,8 +3059,12 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Complimentary Shuttle"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_7: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_7 === 'true'}
+                  name="amenities_7"
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2783,8 +3073,12 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Guest Lounge w/ Workstations & Outdoor Patio"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_8: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_8 === 'true'}
+                  name="amenities_8"
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2793,8 +3087,12 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Complimentary Mercedes-Benz Loaner"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_9: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_9 === 'true'}
+                  name="amenities_9"
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2803,8 +3101,12 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Onsite Café with Fresh Food and Starbucks Drinks"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_10: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_10 === 'true'}
+                  name="amenities_10"
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2813,8 +3115,12 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Early Morning & After Hours Drop-off"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_11: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_11 === 'true'}
+                  name="amenities_11"
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2823,8 +3129,12 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Complimentary Coffee & Bottled Water"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_12: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_12 === 'true'}
+                  name="amenities_12"
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2833,8 +3143,12 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Online Bill Payment Options"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_13: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_13 === 'true'}
+                  name="amenities_13"
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2843,8 +3157,12 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="Complimentary Electric Vehicle Charging Stations"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_14: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_14 === 'true'}
+                  name="amenities_14"
                     sx={{ "& .MuiSvgIcon-root": { fontSize: 33 } }}
                   />
                 }
@@ -2853,8 +3171,13 @@ const MBMaxRegistration = () => {
               <FormControlLabel
                 control={
                   <Checkbox
-                    onChange={handleCheckboxChange}
-                    value="FlexPay"
+                  onChange={(e)=>setFormData({
+                    ...formData,
+                    amenities_15: e.target.checked ? 'true' : 'false',
+                  })}
+                  checked={formData.amenities_15 === 'true'}
+                  name="amenities_15"
+            
                     sx={{
                       "& .MuiSvgIcon-root": { fontSize: 33, paddingTop: 0 },
                     }}

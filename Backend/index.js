@@ -72,7 +72,21 @@ app.post("/add-dealer", (req, res) => {
       marketing_contact_dms_provider,
       marketing_contact_service_scheduler_provider,
       dealership_bdc,
-      amenities
+      amenities_1,
+    amenities_2,
+    amenities_3,
+    amenities_4,
+    amenities_5,
+    amenities_6,
+    amenities_7,
+    amenities_8,
+    amenities_9,
+    amenities_10,
+    amenities_11,
+    amenities_12,
+    amenities_13,
+    amenities_14,
+    amenities_15
     )
     VALUES ?`;
 
@@ -109,7 +123,21 @@ app.post("/add-dealer", (req, res) => {
       dealerData.marketing_contact_dms_provider,
       dealerData.marketing_contact_service_scheduler_provider,
       dealerData.dealership_bdc,
-      dealerData.amenities,
+      dealerData.amenities_1,
+      dealerData.amenities_2,
+      dealerData.amenities_3,
+      dealerData.amenities_4,
+      dealerData.amenities_5,
+      dealerData.amenities_6,
+      dealerData.amenities_7,
+      dealerData.amenities_8,
+      dealerData.amenities_9,
+      dealerData.amenities_10,
+      dealerData.amenities_11,
+      dealerData.amenities_12,
+      dealerData.amenities_13,
+      dealerData.amenities_14,
+      dealerData.amenities_15,
     ],
   ];
 
@@ -149,7 +177,7 @@ app.get("/dealer-info/:dealer_code", (req, res) => {
 app.put("/update-dealer/:dealer_code", (req, res) => {
   const dealerCode = req.params.dealer_code;
   const dealerData = req.body;
-  console.log("LOL",dealerData)
+  console.log("LOL", dealerData);
   const dealershipBdcBuffer = convertBooleanToBuffer(dealerData.dealership_bdc);
   const sql = `
     UPDATE dealer_info
@@ -228,10 +256,28 @@ app.put("/update-dealer/:dealer_code", (req, res) => {
       parts_hours_friday_close=?,
       parts_hours_saturday_open=?,
       parts_hours_saturday_close=?,
+      marketing_team=?,
 
 
-      amenities = ?,
-      marketing_team=?
+
+
+
+
+      amenities_1=?,
+      amenities_2=?,
+      amenities_3=?,
+      amenities_4=?,
+      amenities_5=?,
+      amenities_6=?,
+      amenities_7=?,
+      amenities_8=?,
+      amenities_9=?,
+      amenities_10=?,
+      amenities_11=?,
+      amenities_12=?,
+      amenities_13=?,
+      amenities_14=?,
+      amenities_15=?
     WHERE dealer_code = ?
   `;
 
@@ -266,7 +312,6 @@ app.put("/update-dealer/:dealer_code", (req, res) => {
     dealerData.marketing_contact_dms_provider,
     dealerData.marketing_contact_service_scheduler_provider,
     dealershipBdcBuffer,
-    dealerData.amenities,
     dealerData.marketing_team,
 
     dealerData.sales_hours_sunday_open,
@@ -313,6 +358,22 @@ app.put("/update-dealer/:dealer_code", (req, res) => {
     dealerData.parts_hours_friday_close,
     dealerData.parts_hours_saturday_open,
     dealerData.parts_hours_saturday_close,
+
+    dealerData.amenities_1,
+    dealerData.amenities_2,
+    dealerData.amenities_3,
+    dealerData.amenities_4,
+    dealerData.amenities_5,
+    dealerData.amenities_6,
+    dealerData.amenities_7,
+    dealerData.amenities_8,
+    dealerData.amenities_9,
+    dealerData.amenities_10,
+    dealerData.amenities_11,
+    dealerData.amenities_12,
+    dealerData.amenities_13,
+    dealerData.amenities_14,
+    dealerData.amenities_15,
 
     dealerCode,
   ];
