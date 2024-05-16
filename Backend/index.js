@@ -86,7 +86,8 @@ app.post("/add-dealer", (req, res) => {
     amenities_12,
     amenities_13,
     amenities_14,
-    amenities_15
+    amenities_15,
+    amenities_16
     )
     VALUES ?`;
 
@@ -138,6 +139,7 @@ app.post("/add-dealer", (req, res) => {
       dealerData.amenities_13,
       dealerData.amenities_14,
       dealerData.amenities_15,
+      dealerData.amenities_16,
     ],
   ];
 
@@ -277,7 +279,9 @@ app.put("/update-dealer/:dealer_code", (req, res) => {
       amenities_12=?,
       amenities_13=?,
       amenities_14=?,
-      amenities_15=?
+      amenities_15=?,
+      amenities_16=?
+
     WHERE dealer_code = ?
   `;
 
@@ -374,6 +378,7 @@ app.put("/update-dealer/:dealer_code", (req, res) => {
     dealerData.amenities_13,
     dealerData.amenities_14,
     dealerData.amenities_15,
+    dealerData.amenities_16,
 
     dealerCode,
   ];
