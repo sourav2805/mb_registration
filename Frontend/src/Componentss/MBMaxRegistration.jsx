@@ -143,14 +143,16 @@ const MBMaxRegistration = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-// console.log(other)
+
 
     if (other && formData['amenities_16'] == "") {
-      // Show an error message or handle the error
       setOtherAlert(true);
       return;
     }
 
+
+
+// NOTE  Validation to check amenities only select upto 7
    const checkedCount = Object.keys(formData)
   .filter((key) => key.startsWith('amenities_'))
   .reduce((count, key) => {
@@ -165,16 +167,16 @@ const MBMaxRegistration = () => {
     return count; // No change if not checked or amenities_16 is blank or not true
   }, 0);
 if (checkedCount > 7) {
-  setShowAlert(true); // Show an error message or handle the error in some way
+  setShowAlert(true); 
   return;
 }
 
 
-    // console.log(formData.dealer_code)
+// NOTE  Validation to check dealer_code and dealership_name exist else user not able to submit
     if (
       formData.dealer_code == "" ||
-      formData.dealership_name == "" ||
-      formData.dealership_dba == ""
+      formData.dealership_name == "" 
+      // || formData.dealership_dba == ""
     )
      {return;} 
 
@@ -239,6 +241,14 @@ if (checkedCount > 7) {
     }));
   };
 
+
+  // NOTE  Make sure other checkbox option is checked if amenities_16 field have any value in it
+  useEffect(() => {
+    if (formData.amenities_16) {
+      setOther(true);
+    }
+  }, [formData.amenities_16]);
+
   // Function to handle onBlur event
   const handleBlur = () => {
     // Fetch record from backend based on the dealer code
@@ -261,9 +271,7 @@ if (checkedCount > 7) {
         const valueFromBackend =
           data.dealership_bdc.data[0] === 0 ? "no" : "yes";
         setValue(valueFromBackend);
-        if(data.amenities_16){
-          setOther(true)
-        }
+     
         console.log(valueFromBackend);
       })
       .catch((error) => console.error("Error fetching record:", error));
@@ -513,7 +521,7 @@ if (checkedCount > 7) {
               />
               <FormControl
                 variant="standard"
-                sx={{ minWidth: 120, fontFamily: "MBCorpoSText-Light" }}
+                sx={{ minWidth: 100, fontFamily: "MBCorpoSText-Light" }}
               >
                 <InputLabel id="state-label">State</InputLabel>
                 <Select
@@ -3496,7 +3504,7 @@ if (checkedCount > 7) {
               Select up to 7
             </span>
 
-            {/* {showSuccess&&<Alert severity="success">Data successfully updated!!.</Alert>} */}
+           
 
            
 
@@ -3810,13 +3818,17 @@ if (checkedCount > 7) {
 
           <Button
             type="submit"
+            className="submitbutton"
             sx={{
               backgroundColor: "#176DB7",
               borderRadius: 0,
               color: "#fff",
-              padding: "0, 20",
+             paddingRight:"50px",
+             paddingLeft:"50px",
+             marginTop:"30px",
               fontFamily: "MBCorpoSText",
               fontWeight: 700,
+             
              
               
             }}

@@ -6,6 +6,12 @@
   padding: 2rem;
   text-align: center;
 }
+
+.submitbutton:hover {
+  text-decoration: none;
+  background-color: #186CB6 !important;
+}
+
 .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
    
   color: #176DB7 !important;
@@ -15,6 +21,9 @@
   background-color: #176DB7 !important;
   padding: 5px 50px !important;
 }
+
+
+
 
 .css-1rx2jnp-MuiButtonBase-root-MuiButton-root:hover {background-color: #176DB7 !important;}
 
